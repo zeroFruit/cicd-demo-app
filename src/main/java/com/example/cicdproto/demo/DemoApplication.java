@@ -18,7 +18,7 @@ public class DemoApplication {
 
     @RestController
     public class MyController {
-        @GetMapping("/hello")
+        @GetMapping("/hello2")
         public String helloWorld() {
             return foo;
         }
