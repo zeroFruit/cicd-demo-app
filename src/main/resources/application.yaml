@@ -1,1 +1,4 @@
 foo: baz2
+winter:
+  is:
+    coming: true
