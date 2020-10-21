@@ -35,13 +35,13 @@ const parseResponse = (res) => {
         console.error(err)
         process.exit(1)
     }
-    const ciEnabledLabel = labels.find(item => item.id === ciEnabledLabelId)
-    if (ciEnabledLabel) {
-        console.log(`CI enabled label found on PR ${pullRequestId}`)
-        process.exit(0)
-    }
-    console.log(`CI Enabled label not found on PR ${pullRequestId}`)
-    process.exit(1)
+    // const ciEnabledLabel = labels.find(item => item.id === ciEnabledLabelId)
+    // if (ciEnabledLabel) {
+    //     console.log(`CI enabled label found on PR ${pullRequestId}`)
+    //     process.exit(0)
+    // }
+    // console.log(`CI Enabled label not found on PR ${pullRequestId}`)
+    // process.exit(1)
 }
 
 https.get(options, (response) => {
