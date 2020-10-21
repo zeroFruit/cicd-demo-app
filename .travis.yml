@@ -2,6 +2,14 @@ language: java
 jdk:
   - openjdk8
 
+
+env:
+  - NODE_VERSION="v10.16.0"
+
+before_install:
+  - nvm install $NODE_VERSION
+  - node ./scripts/setLabelsAsEnv.js $TRAVIS_PULL_REQUEST
+
 branches:
   only:
     - master
