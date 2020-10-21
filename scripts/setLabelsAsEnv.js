@@ -4,7 +4,7 @@ const https = require('https')
 const ciEnabledLabelId = 861719997
 // Example Github API Pull Request URL - 'https://github.com/DFEAGILEDEVOPS/MTC/pull/566'
 const pullRequestId = process.argv[2]
-
+console.log('pullRequestId', pullRequestId);
 if (!pullRequestId) {
     console.log('Missing argument: pull request id')
     process.exit(1)
@@ -13,11 +13,11 @@ if (!pullRequestId) {
 const pullRequestUrl = `/repos/zeroFruit/cicd-demo-app/pulls/${pullRequestId}`
 
 const options = {
-    hostname: 'api.github.com',
+    hostname: 'https://api.github.com',
     path: pullRequestUrl,
     method: 'GET',
     headers: {
-        'User-Agent': 'node/https'
+        Accept: 'application/vnd.github.v3+json',
     }
 }
 
