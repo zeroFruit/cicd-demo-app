@@ -7,6 +7,8 @@ const commitMessage = process.argv[2]
 const commitRange = process.argv[3]
 console.log('commit message', commitMessage);
 console.log('commit range', commitRange);
+
+
 // console.log('pullRequestId', pullRequestId);
 // if (!pullRequestId) {
 //     console.log('Missing argument: pull request id')
